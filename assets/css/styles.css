@@ -1,0 +1,254 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Scrollbar------------- */
+::-webkit-scrollbar {
+  height: 0;
+  width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background: #764a00;
+  border-radius: 5rem;
+}
+
+body {
+  padding-top: 70px;
+  overflow-x: hidden;
+}
+
+/* Navbar Section */
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 10%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+header.sticky {
+  background: #fff;
+  border-bottom: 1px solid #fff;
+  padding: 12px 10%;
+}
+header .logo img {
+  width: 120px;
+}
+header .navlist li {
+  position: relative;
+}
+
+.navlist {
+  display: flex;
+  color: #545454;
+}
+.navlist a {
+  display: inline-block;
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: 0.5s;
+  animation: slideAnimation 1s ease forwards;
+  animation-delay: calc(0.3s * var(--i));
+  opacity: 0;
+  position: relative;
+  font-size: 20px;
+  line-height: 28.8px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.navlist a:hover {
+  color: #000;
+}
+header .navlist a.active {
+  font-weight: bold;
+  color: #764a00;
+  position: relative;
+}
+
+header .navlist a.active::after {
+  content: "";
+  position: absolute;
+  left: 19px;
+  bottom: 5px;
+  height: 2px;
+  width: 41%;
+  background-color: #764a00;
+  transition: width 0.3s ease;
+}
+
+header .navlist a:hover::after {
+  width: 50%;
+}
+#menu-icon {
+  font-size: 1.8rem;
+  z-index: 10001;
+  cursor: pointer;
+  margin-left: 25px;
+  background: #fff;
+  border-radius: 3px;
+  color: #764a00;
+  display: none;
+}
+.navlist a.active {
+  font-weight: bold;
+  color: #000;
+}
+/* Border for Get Involved link */
+.nav-link.get-involved {
+  color: #764a00;
+  border: 2px solid #764a00;
+  padding: 5px 15px;
+  border-radius: 20px;
+  margin-right: 15px;
+  transition: 0.7s ease;
+}
+.nav-link.get-involved:hover {
+  background-color: #764a00;
+  color: white;
+  border: none;
+}
+/* Background color for Contact Us link */
+.nav-link.contact-us {
+  background-color: #764a00;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  transition: 0.7s ease;
+}
+.nav-link.contact-us:hover {
+  background-color: transparent;
+  border: 2px solid #764a00;
+  color: #764a00;
+}
+
+/* Responsiveness */
+@media (max-width: 990px) {
+  header,
+  header.sticky {
+    padding: 15px 5%;
+  }
+  .navlist {
+    padding: 8px 15px;
+  }
+}
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+    transition: all 0.4s ease;
+  }
+  #menu-icon.bx-x {
+    transform: rotate(-180deg);
+  }
+  .navlist {
+    display: flex;
+    position: absolute;
+    top: -1000px;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    background: #fff;
+    text-align: left;
+    padding: 0 5%;
+
+    transition: all 0.7s ease;
+  }
+  .navlist a {
+    display: block;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+  }
+  header .navlist a.active::after {
+    width: 8%;
+    bottom: 10px;
+  }
+  .navlist.open {
+    top: 100%;
+    display: flex;
+  }
+}
+/* Responsiveness */
+@media (max-width: 990px) {
+  header,
+  header.sticky {
+    padding: 15px 5%;
+  }
+  .navlist {
+    padding: 8px 15px;
+  }
+
+  .home-content {
+    margin-top: 5rem;
+  }
+  .nav-link.get-involved {
+    margin-bottom: 30px;
+    width: 50%;
+    margin-left: 1.1rem;
+  }
+  .nav-link.contact-us {
+    width: 50%;
+    margin-left: 1.1rem;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+    transition: all 0.4s ease;
+  }
+  #menu-icon.bx-x {
+    transform: rotate(-180deg);
+  }
+  .navlist {
+    display: flex;
+    position: absolute;
+    top: -1000px;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    background: #fff;
+    text-align: left;
+    padding: 0 5%;
+    transition: all 0.7s ease;
+  }
+  .navlist a {
+    display: block;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+  }
+  .navlist.open {
+    top: 100%;
+  }
+}
+/* End of Navbar Section */
+
+
+
+/* Animations--------------------- */
+/* Navbar Animation Effect---- */
+@keyframes slideAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
