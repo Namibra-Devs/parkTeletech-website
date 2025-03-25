@@ -293,7 +293,14 @@ header .navlist a:hover::after {
 .intro-section h1{
   font-size: 2rem;
 }
+.intro-card-title {
+ font-size: 0.9rem;
+ font-weight: bold;
+}
 
+.intro-card-text p {
+ font-size: 0.9rem;
+}
 
 
 
