@@ -288,6 +288,20 @@ header .navlist a:hover::after {
   padding: 10px 20px;
   border-radius: 5px;
 }
+.explore-btn{
+  background-color: #FF0029;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  padding: 10px 25px;
+  transition: 0.3s ease;
+ 
+}
+.explore-btn:hover{
+  background-color: transparent;
+  border: 1px solid #ff0029;
+  
+}
 
 /* Hero Section Mobile View---- */
 @media (max-width: 986px) {
