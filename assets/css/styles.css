@@ -302,6 +302,23 @@ header .navlist a:hover::after {
  font-size: 0.9rem;
 }
 
+/* Photo Section */
+#photo-section .bg-dark {
+  min-height: 200px;
+}
+
+#photo-section img {
+  object-fit: cover;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  #photo-section .col-md-4 {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+}
+
 
 
 
