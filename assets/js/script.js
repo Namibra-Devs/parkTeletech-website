@@ -27,3 +27,19 @@
       };
   });
  
+// JavaScript to change images every 7 seconds with opposite direction animation
+const images = document.querySelectorAll(".image-container img");
+let currentImageIndex = 0;
+
+function changeImage() {
+  
+  images[currentImageIndex].classList.remove("active-image");
+  images[currentImageIndex].classList.add("inactive-image");
+
+  
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+
+
+  images[currentImageIndex].classList.remove("inactive-image");
+  images[currentImageIndex].classList.add("active-image");
+}
