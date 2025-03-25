@@ -43,3 +43,4 @@ function changeImage() {
   images[currentImageIndex].classList.remove("inactive-image");
   images[currentImageIndex].classList.add("active-image");
 }
+
