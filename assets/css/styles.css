@@ -150,7 +150,7 @@ header .navlist a:hover::after {
     right: 0;
     left: 0;
     flex-direction: column;
-    background: #fff;
+    background: #000;
     text-align: left;
     padding: 0 5%;
 
@@ -210,7 +210,7 @@ header .navlist a:hover::after {
     right: 0;
     left: 0;
     flex-direction: column;
-    background: #fff;
+    background: #000;
     text-align: left;
     padding: 0 5%;
     transition: all 0.7s ease;
@@ -642,8 +642,9 @@ header .navlist a:hover::after {
 
 @media (max-width: 768px) {
   .about-hero {
-    height: 40vh;
+    height: 100vh;
   }
+  
   .about-hero h1 {
     font-size: 24px;
   }
@@ -669,11 +670,6 @@ header .navlist a:hover::after {
   }
 }
 /* Mission & Vision Section */
-#mission-vision {
-
-  padding: 50px 0;
-}
-
 /* Thick Colored Line */
 .line {
   width: 20px;
@@ -695,7 +691,7 @@ header .navlist a:hover::after {
 
   .line {
       height: auto;
-      min-height: 200px; 
+      min-height: 220px; 
       width: 17px;
       }
 }
