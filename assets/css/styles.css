@@ -288,19 +288,17 @@ header .navlist a:hover::after {
   padding: 10px 20px;
   border-radius: 5px;
 }
-.explore-btn{
-  background-color: #FF0029;
+.explore-btn {
+  background-color: #ff0029;
   color: #fff;
   text-decoration: none;
   border-radius: 20px;
   padding: 10px 25px;
   transition: 0.3s ease;
- 
 }
-.explore-btn:hover{
+.explore-btn:hover {
   background-color: transparent;
   border: 1px solid #ff0029;
-  
 }
 
 /* Hero Section Mobile View---- */
@@ -313,9 +311,77 @@ header .navlist a:hover::after {
 
     margin-bottom: 30px;
   }
-  .carousel-caption .btn{
+  .carousel-caption .btn {
     margin-top: 20px;
   }
+}
+
+/* Intro Cards---------------- */
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before,
+.card::after,
+.card .border-left,
+.card .border-right {
+  content: "";
+  position: absolute;
+  background: #ff0029;
+}
+
+/* Top border */
+.card::before {
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  transition: width 0.3s linear;
+}
+
+/* Bottom border */
+.card::after {
+  bottom: 0;
+  right: 0;
+  width: 0%;
+  height: 2px;
+  transition: width 0.3s linear 0.6s;
+}
+
+/* Left border */
+.card .border-left {
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 0%;
+  transition: height 0.3s linear 0.3s;
+}
+
+/* Right border */
+.card .border-right {
+  bottom: 0;
+  right: 0;
+  width: 2px;
+  height: 0%;
+  transition: height 0.3s linear 0.9s;
+}
+
+/* Hover Effect */
+.card:hover::before {
+  width: 100%;
+}
+
+.card:hover::after {
+  width: 100%;
+}
+
+.card:hover .border-left {
+  height: 100%;
+}
+
+.card:hover .border-right {
+  height: 100%;
 }
 
 /* Intro Section---- */
@@ -334,7 +400,7 @@ header .navlist a:hover::after {
 /* Photo Section */
 #photo-section .bg-dark {
   min-height: 200px;
-  background-color: #0A1B2A !important;
+  background-color: #0a1b2a !important;
 }
 
 #photo-section img {
@@ -412,7 +478,7 @@ header .navlist a:hover::after {
   padding: 20px;
   border-radius: 8px;
   display: flex;
-  flex-direction: column; /* Stack items vertically */
+  flex-direction: column;
   align-items: left;
   text-align: left;
 }
@@ -434,12 +500,12 @@ header .navlist a:hover::after {
 
 /* Background Colors */
 .light-bg {
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   color: #000;
 }
 
 .dark-bg {
-  background-color: #0A1B2A;
+  background-color: #0a1b2a;
   color: #fff;
 }
 
@@ -450,55 +516,56 @@ header .navlist a:hover::after {
 }
 
 @media (max-width: 986px) {
-  .right-curved-line{
+  .right-curved-line {
     width: 65px;
   }
-  .left-curved-line{
+  .left-curved-line {
     width: 65px;
   }
 }
 
 /* Contact Section */
 #contact {
-    background-color: #f8f9fa;
-    padding: 60px 0;
+  background-color: #f8f9fa;
+  padding: 60px 0;
 }
 
 #contact h1 {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 #contact .form-label {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 #contact .btn {
-    background-color: #FF3535;
-    color: #fff;
-    border: none;
-    transition: 0.3s ease;
+  background-color: #ff3535;
+  color: #fff;
+  border: none;
+  transition: 0.3s ease;
 }
 
 #contact .btn:hover {
-    background-color: #fff;
-    color: #FF3535;
-    border: 1px solid #FF3535;
+  background-color: #fff;
+  color: #ff3535;
+  border: 1px solid #ff3535;
 }
 
 /* Map Container */
 .map-container iframe {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
 }
 
 /* Footer Section */
 .footer-section {
-  background-color: #0A1B2A;
+  background-color: #0a1b2a;
   color: #fff;
 }
 
-.footer-section h4, .footer-section h5 {
+.footer-section h4,
+.footer-section h5 {
   color: #fff;
 }
 
@@ -514,7 +581,7 @@ header .navlist a:hover::after {
 }
 
 .footer-link:hover {
-  color: #FF3535;
+  color: #ff3535;
 }
 
 .social-icons {
@@ -530,24 +597,108 @@ header .navlist a:hover::after {
 }
 
 .social-icons a:hover {
-  color: #FF3535;
+  color: #ff3535;
 }
 
 /* Mobile View Adjustments */
 @media (max-width: 768px) {
   .text-center {
-      font-size: 14px;
+    font-size: 14px;
   }
 }
 
+/* About Us Page------- */
+/* About Hero Section */
+.about-hero {
+  position: relative;
+  height: 100vh;
+  background: url("/assets/images/about-hero.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: flex-end;
+  margin-top: 70px;
+}
 
+.about-hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
 
+.about-hero .container {
+  z-index: 1;
+}
+.about-caption {
+  position: absolute;
+  bottom: 30%;
+  left: 5%;
+  text-align: left;
+}
+.about-caption p {
+  width: 70%;
+}
 
+@media (max-width: 768px) {
+  .about-hero {
+    height: 40vh;
+  }
+  .about-hero h1 {
+    font-size: 24px;
+  }
+  .about-hero p {
+    font-size: 14px;
+  }
+}
+/* About Content Section----- */
 
+.about-image {
+  width: 100%;
+  height: 600px;
+  background: url("/assets/images/about-content.png") no-repeat center
+    center/cover;
+  margin-top: -50px;
+}
 
+/* Ensure the image aligns seamlessly with About Hero */
+@media (max-width: 768px) {
+  .about-image {
+    height: 490px;
+    margin-top: 0px;
+  }
+}
+/* Mission & Vision Section */
+#mission-vision {
 
+  padding: 50px 0;
+}
 
+/* Thick Colored Line */
+.line {
+  width: 20px;
+  height: 100%;
+  min-height: 180px; /* Ensures visibility */
+  background-color: #0A1B2A;
+}
 
+/* Ensures the colored line adjusts to text */
+.mission-box .line, .vision-box .line {
+  flex-shrink: 0;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .col-md-6 {
+      flex-direction: column;
+  }
+
+  .line {
+      height: auto;
+      min-height: 200px; 
+      width: 17px;
+      }
+}
 /* Animations--------------------- */
 /* Navbar Animation Effect---- */
 @keyframes slideAnimation {
