@@ -695,6 +695,71 @@ header .navlist a:hover::after {
       width: 17px;
       }
 }
+
+/* Portfolio Page----- */
+.portfolio-hero {
+  position: relative;
+  height: 100vh;
+  background: url("/assets/images/portfolio-hero.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: flex-end;
+  margin-top: 70px;
+}
+
+.portfolio-hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.portfolio-hero .container {
+  z-index: 1;
+}
+/* Project Images Styling */
+/* Remove spacing between images */
+.row.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.row.no-gutters > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/* Project Images Styling */
+.project-img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Adjust height for Left & Right Columns */
+.col-md-3 img {
+    height: calc(34vh - 2px); /* Adjusted for alignment */
+}
+
+/* Central and Top Image Adjustments */
+.col-md-6 img:first-child {
+    height: 30vh; /* Reduced height for the top image */
+}
+
+.col-md-6 img:last-child {
+    height: 71vh; /* Increased height for the central image */
+}
+
+/* Ensure Mobile View Stacks Images */
+@media (max-width: 768px) {
+    .col-md-3 img,
+    .col-md-6 img {
+        height: auto; /* Allow images to resize naturally */
+    }
+}
+
+
+
 /* Animations--------------------- */
 /* Navbar Animation Effect---- */
 @keyframes slideAnimation {
