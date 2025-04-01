@@ -317,6 +317,10 @@ header .navlist a:hover::after {
 }
 
 /* Intro Cards---------------- */
+.card {
+  position: relative;
+  overflow: hidden;
+}
 
 /* Intro Section---- */
 .intro-section h1 {
