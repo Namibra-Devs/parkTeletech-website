@@ -644,7 +644,7 @@ header .navlist a:hover::after {
   .about-hero {
     height: 100vh;
   }
-  
+
   .about-hero h1 {
     font-size: 24px;
   }
@@ -670,37 +670,40 @@ header .navlist a:hover::after {
   }
 }
 /* Mission & Vision Section */
-/* Thick Colored Line */
+
 .line {
   width: 20px;
   height: 100%;
-  min-height: 180px; /* Ensures visibility */
-  background-color: #0A1B2A;
+  min-height: 180px; 
+  background-color: #0a1b2a;
 }
 
 /* Ensures the colored line adjusts to text */
-.mission-box .line, .vision-box .line {
+.mission-box .line,
+.vision-box .line {
   flex-shrink: 0;
 }
 
 /* Responsive Fix */
 @media (max-width: 768px) {
   .col-md-6 {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .line {
-      height: auto;
-      min-height: 220px; 
-      width: 17px;
-      }
+    height: auto;
+    min-height: 220px;
+    width: 17px;
+    display: none;
+  }
 }
 
 /* Portfolio Page----- */
 .portfolio-hero {
   position: relative;
   height: 100vh;
-  background: url("/assets/images/portfolio-hero.jpg") no-repeat center center/cover;
+  background: url("/assets/images/portfolio-hero.jpg") no-repeat center
+    center/cover;
   display: flex;
   align-items: flex-end;
   margin-top: 70px;
@@ -719,46 +722,46 @@ header .navlist a:hover::after {
   z-index: 1;
 }
 /* Project Images Styling */
-/* Remove spacing between images */
+
 .row.no-gutters {
-    margin-right: 0;
-    margin-left: 0;
+  margin-right: 0;
+  margin-left: 0;
 }
 
-.row.no-gutters > [class*='col-'] {
-    padding-right: 0;
-    padding-left: 0;
+.row.no-gutters > [class*="col-"] {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 /* Project Images Styling */
 .project-img {
-    width: 100%;
-    object-fit: cover;
+  width: 100%;
+  object-fit: cover;
 }
 
 /* Adjust height for Left & Right Columns */
-.col-md-3 img {
-    height: calc(34vh - 2px); /* Adjusted for alignment */
+.left-images img {
+  height: calc(34vh - 2px);
 }
-
+.right-images img{
+   height: calc(34vh - 2px);
+}
 /* Central and Top Image Adjustments */
-.col-md-6 img:first-child {
-    height: 30vh; /* Reduced height for the top image */
+.center-images img:first-child {
+  height: 30vh;
 }
 
-.col-md-6 img:last-child {
-    height: 71vh; /* Increased height for the central image */
+.center-images img:last-child {
+  height: 71vh;
 }
 
 /* Ensure Mobile View Stacks Images */
 @media (max-width: 768px) {
-    .col-md-3 img,
-    .col-md-6 img {
-        height: auto; /* Allow images to resize naturally */
-    }
+  .left-images img,
+  .right-images img {
+    height: auto;
+  }
 }
-
-
 
 /* Animations--------------------- */
 /* Navbar Animation Effect---- */
