@@ -316,12 +316,6 @@ header .navlist a:hover::after {
   }
 }
 
-/* Intro Cards---------------- */
-.card {
-  position: relative;
-  overflow: hidden;
-}
-
 /* Intro Section---- */
 .intro-section h1 {
   font-size: 2rem;
@@ -613,7 +607,7 @@ header .navlist a:hover::after {
 .line {
   width: 20px;
   height: 100%;
-  min-height: 180px; 
+  min-height: 180px;
   background-color: #0a1b2a;
 }
 
@@ -633,7 +627,6 @@ header .navlist a:hover::after {
     height: auto;
     min-height: 220px;
     width: 17px;
-
   }
 }
 
@@ -683,8 +676,8 @@ header .navlist a:hover::after {
 .left-images img {
   height: calc(34vh - 2px);
 }
-.right-images img{
-   height: calc(34vh - 2px);
+.right-images img {
+  height: calc(34vh - 2px);
 }
 /* Central and Top Image Adjustments */
 .center-images img:first-child {
@@ -696,12 +689,67 @@ header .navlist a:hover::after {
 }
 
 /* Ensure Mobile View Stacks Images */
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .left-images img,
   .right-images img {
     height: auto;
   }
 }
+
+/* Career Page----------- */
+.career-hero {
+  position: relative;
+  height: 100vh;
+  background: url("/assets/images/career-home.png") no-repeat center
+    center/cover;
+  display: flex;
+  align-items: flex-end;
+  margin-top: 70px;
+  overflow: hidden;
+}
+
+.career-intro p {
+  font-size: 18px;
+  color: #333;
+}
+/* Central and Top Image Adjustments */
+.career-center-images img:first-child {
+  height: 20vh;
+}
+
+.career-center-images img:last-child {
+  height: 47vh;
+}
+
+.cert-img-wrapper {
+  position: relative;
+  overflow: hidden;
+ 
+}
+
+.cert-img-wrapper img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  width: 75%;
+  height: 100%;
+}
+
+.cert-img-wrapper:hover img {
+  transform: scale(1.05);  /* Slight zoom effect on hover */
+  filter: brightness(85%); /* Darken image a bit on hover */
+}
+
+@media (max-width: 968px) {
+  .career-intro p{
+    font-size: 1rem;
+    
+  }
+  .title{
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+}
+
+
 
 /* Animations--------------------- */
 /* Navbar Animation Effect---- */
