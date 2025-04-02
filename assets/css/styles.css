@@ -762,24 +762,24 @@ header .navlist a:hover::after {
 }
 
 /* Portfolio Card Hover Effect */
-.card {
+.cards {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 
 
-.card img {
+.cards img {
   max-width: 80px;
   margin-bottom: 15px;
 }
-.card p{
+.cards p{
   text-align: center;
   font-size: 0.9rem;
 }
 
 
 /* Job Card Styling */
-.card {
+.cards {
   background-color: #fff;
   padding: 30px;
   border-radius: 8px;
