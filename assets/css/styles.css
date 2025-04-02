@@ -696,7 +696,7 @@ header .navlist a:hover::after {
   }
 }
 
-/* Career Page----------- */
+/* Health & Safety Page----------- */
 .career-hero {
   position: relative;
   height: 100vh;
@@ -749,7 +749,93 @@ header .navlist a:hover::after {
   }
 }
 
+/* Career Page----------- */
+.health-hero{
+  position: relative;
+  height: 100vh;
+  background: url("/assets/images/helth-hero.png") no-repeat center
+    center/cover;
+  display: flex;
+  align-items: flex-end;
+  margin-top: 70px;
+  overflow: hidden;
+}
 
+/* Portfolio Card Hover Effect */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.card img {
+  max-width: 80px;
+  margin-bottom: 15px;
+}
+.card p{
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+
+/* Job Card Styling */
+.card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.card .fa-map-marker-alt {
+  font-size: 18px;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card a.btn {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px;
+  text-align: center;
+}
+
+.card a.btn:hover {
+  background-color: #ff0029;
+}
+
+hr {
+  border: 0;
+  border-top: 2px solid #ddd;
+}
+
+/* Aligning content */
+.card-body p {
+  text-align: left;
+}
+
+.card-body .d-flex {
+  display: flex;
+  align-items: center;
+}
+
+.card-body .d-flex span {
+  font-size: 16px;
+  margin-left: 8px;
+}
+
+@media (max-width: 968px){
+.about-caption p {
+  width: 90%;
+}
+
+}
 
 /* Animations--------------------- */
 /* Navbar Animation Effect---- */
