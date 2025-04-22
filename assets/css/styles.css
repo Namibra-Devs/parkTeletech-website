@@ -47,7 +47,7 @@ header.sticky {
   padding: 12px 10%;
 }
 header .logo img {
-  width: 120px;
+  width: 100px;
 }
 header .navlist li {
   position: relative;
@@ -129,7 +129,10 @@ header .navlist a:hover::after {
 @media (max-width: 990px) {
   header,
   header.sticky {
-    padding: 15px 5%;
+    padding: 10px 5%;
+  }
+  header .logo img {
+    width: 80px;
   }
   .navlist {
     padding: 8px 15px;
@@ -174,7 +177,7 @@ header .navlist a:hover::after {
 @media (max-width: 990px) {
   header,
   header.sticky {
-    padding: 15px 5%;
+    padding: 10px 5%;
   }
   .navlist {
     padding: 8px 15px;
@@ -233,7 +236,7 @@ header .navlist a:hover::after {
   max-width: 100%;
   height: 100vh;
   overflow: hidden;
-  margin-top: 69px;
+  margin-top: 50px;
 }
 
 .hero-section {
@@ -303,9 +306,9 @@ header .navlist a:hover::after {
 
 /* Hero Section Mobile View---- */
 @media (max-width: 986px) {
-  /* .carousel-caption {
-    bottom: 18%;
-  } */
+  .home-section {
+    margin-top: 6px;
+  }
   .carousel-caption h1 {
     font-size: 1.9rem;
 
@@ -531,11 +534,69 @@ header .navlist a:hover::after {
 .social-icons a:hover {
   color: #ff3535;
 }
+/* Floating Buttons Container - Fixed Positioning */
+  .floating-buttons-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column-reverse; /* WhatsApp on bottom, Back-to-top above */
+    gap: 15px;
+    z-index: 9999; /* Ensure it stays above other elements */
+  }
+
+  /* Shared Button Styles */
+  .floating-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    position: relative;
+  }
+
+  /* WhatsApp Button */
+  .whatsapp-btn {
+    background: #25D366;
+    text-decoration: none;
+  }
+  .whatsapp-btn:hover {
+    background: #128C7E;
+    transform: scale(1.1);
+  }
+
+  /* Back to Top Button */
+  .back-to-top {
+    background: #ff0029;
+    display: block; 
+  }
+  .back-to-top:hover {
+    background: #ffffff;
+    color: #ff0029;
+    transform: scale(1.1);
+  }
+
+  /* Show back-to-top button when scrolling */
+  .back-to-top.visible {
+    display: flex;
+  }
 
 /* Mobile View Adjustments */
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .text-center {
     font-size: 14px;
+  }
+    .floating-btn{
+    width: 40px;
+    height: 40px;
+    font-size: 19px;
   }
 }
 
@@ -547,7 +608,7 @@ header .navlist a:hover::after {
   background: url("/assets/images/about-hero.jpg") no-repeat center center/cover;
   display: flex;
   align-items: flex-end;
-  margin-top: 70px;
+  margin-top: 50px;
   overflow: hidden;
 }
 
@@ -576,6 +637,7 @@ header .navlist a:hover::after {
 @media (max-width: 768px) {
   .about-hero {
     height: 90vh;
+    margin-top: 6px;
   }
 
   .about-hero h1 {
@@ -638,7 +700,7 @@ header .navlist a:hover::after {
     center/cover;
   display: flex;
   align-items: flex-end;
-  margin-top: 70px;
+  margin-top: 50px;
   overflow: hidden;
 }
 
@@ -694,8 +756,10 @@ header .navlist a:hover::after {
   .right-images img {
     height: auto;
   }
+  .portfolio-hero {
+    margin-top: 6px;
+  }
 }
-
 /* Health & Safety Page----------- */
 .career-hero {
   position: relative;
@@ -704,7 +768,7 @@ header .navlist a:hover::after {
     center/cover;
   display: flex;
   align-items: flex-end;
-  margin-top: 70px;
+  margin-top: 50px;
   overflow: hidden;
 }
 
@@ -724,7 +788,6 @@ header .navlist a:hover::after {
 .cert-img-wrapper {
   position: relative;
   overflow: hidden;
- 
 }
 
 .cert-img-wrapper img {
@@ -734,30 +797,31 @@ header .navlist a:hover::after {
 }
 
 .cert-img-wrapper:hover img {
-  transform: scale(1.05);  /* Slight zoom effect on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
   filter: brightness(85%); /* Darken image a bit on hover */
 }
 
 @media (max-width: 968px) {
-  .career-intro p{
-    font-size: 1rem;
-    
+  .career-hero {
+    margin-top: 6px;
   }
-  .title{
+  .career-intro p {
+    font-size: 1rem;
+  }
+  .title {
     font-size: 1.2rem;
     font-weight: bold;
   }
 }
 
 /* Career Page----------- */
-.health-hero{
+.health-hero {
   position: relative;
   height: 100vh;
-  background: url("/assets/images/helth-hero.png") no-repeat center
-    center/cover;
+  background: url("/assets/images/helth-hero.png") no-repeat center center/cover;
   display: flex;
   align-items: flex-end;
-  margin-top: 70px;
+  margin-top: 50px;
   overflow: hidden;
 }
 
@@ -766,17 +830,14 @@ header .navlist a:hover::after {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-
 .cards img {
   max-width: 80px;
   margin-bottom: 15px;
 }
-.cards p{
+.cards p {
   text-align: center;
   font-size: 0.9rem;
 }
-
 
 /* Job Card Styling */
 .cards {
@@ -830,11 +891,16 @@ hr {
   margin-left: 8px;
 }
 
-@media (max-width: 968px){
-.about-caption p {
-  width: 90%;
-}
-
+@media (max-width: 968px) {
+  .about-caption p {
+    width: 90%;
+  }
+  .health-hero {
+    margin-top: 6px;
+  }
+  .cards img {
+    max-width: 60px;
+  }
 }
 
 /* Animations--------------------- */

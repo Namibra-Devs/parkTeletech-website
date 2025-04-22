@@ -44,3 +44,15 @@ function changeImage() {
   images[currentImageIndex].classList.add("active-image");
 }
 
+// Back to Top Button
+const backToTopBtn = document.querySelector('.back-to-top');
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 300) {
+    backToTopBtn.style.display = 'flex';
+  } else {
+    backToTopBtn.style.display = 'none';
+  }
+});
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
