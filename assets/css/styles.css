@@ -909,7 +909,114 @@ hr {
     max-width: 60px;
   }
 }
+/* Contact Us Page------ */
+/* Hero Section */
+.contact-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/assets/images/about-hero.jpg") no-repeat center center/cover;
+  padding: 120px 0 80px;
+  position: relative;
+}
 
+.contact-hero-content {
+  position: relative;
+  z-index: 1;
+}
+/* Form Styles */
+.form-control, .form-select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.btn-contact {
+  background-color: #ff0029;
+  border-color: #ff3535;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: 0.3s;
+  color: #fff;
+}
+
+.btn-contact:hover {
+  background-color: transparent;
+  border-color: #ff0029;
+  color: #ff0029;
+}
+/* Contact Section */
+.contact-section {
+  background-color: #f8f9fa;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+background-color: #0a1b2a;
+}
+
+.social-links a {
+  color: #ff0029;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #0a1b2a;
+}
+
+/* Map Section */
+.map-container {
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  height: 55vh;
+}
+
+
+/* FAQ Section */
+.accordion-button:not(.collapsed) {
+  background-color: rgba(13, 110, 253, 0.1);
+  color: #0a1b2a;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: rgba(13, 110, 253, 0.25);
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0a1b2a 100%);
+}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-hero {
+      padding: 80px 0 60px;
+  }
+  
+  .hero-content h1 {
+      font-size: 2.2rem;
+  }
+  
+  .contact-info div {
+      margin-bottom: 20px;
+  }
+}
 /* Animations--------------------- */
 /* Navbar Animation Effect---- */
 @keyframes slideAnimation {
