@@ -679,7 +679,7 @@ header .navlist a:hover::after {
   flex-shrink: 0;
 }
 .team-member {
-  border: 1px solid #0a1b2a;
+ 
   padding: 0px 10px;
   text-align: left;
 }
